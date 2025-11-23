@@ -1,0 +1,131 @@
+.jfg-header {
+  background: radial-gradient(circle at top left, blue 0, black 45%);
+  color: #ffffff;
+  padding: 16px 16px 0;
+}
+
+.jfg-header-top {
+  max-width: 1200px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f97316, #ef4444);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.5);
+}
+
+.logo-text {
+  font-size: 26px;
+  font-weight: 800;
+  color: #050816;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.title .java {
+  color: #fbbf24;
+}
+
+.title .fullstack {
+  color: #22c55e;
+}
+
+.title .guru {
+  color: #38bdf8;
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  // color: #9ca3af;
+}
+
+/* CTA buttons */
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.primary-btn,
+.outline-btn {
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #f97316, #22c55e, #38bdf8);
+  color: #050816;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.4);
+}
+
+.primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+.outline-btn {
+  background: transparent;
+  color: #e5e7eb;
+  border-color: #6b7280;
+}
+
+.outline-btn:hover {
+  border-color: #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .jfg-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta {
+    align-self: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}

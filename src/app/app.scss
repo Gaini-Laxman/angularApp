@@ -1,0 +1,12 @@
+.jfg-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.jfg-main {
+  min-height: calc(100vh - 120px);
+  background: gray;
+}

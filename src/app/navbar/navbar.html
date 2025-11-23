@@ -1,0 +1,33 @@
+<nav class="jfg-nav">
+  <div class="jfg-nav-inner">
+    <button class="back-btn" (click)="goBack()">← Back</button>
+    <!-- remove full logo here -->
+    <div class="jfg-nav-logo"></div>
+
+    <!-- Desktop menu -->
+    <ul class="jfg-menu">
+      <li *ngFor="let item of navItems">
+        <a
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+          class="jfg-menu-item"
+        >
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+
+    <!-- Hamburger (mobile) -->
+    <button
+      type="button"
+      class="jfg-hamburger"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</nav>

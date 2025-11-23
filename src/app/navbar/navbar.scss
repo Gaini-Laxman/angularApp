@@ -1,0 +1,145 @@
+.jfg-nav {
+  width: 100%;
+  background: green;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.jfg-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.jfg-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 18px;
+}
+
+.brace {
+  color: #f97316;
+}
+
+.text-main {
+  color: #38bdf8;
+}
+
+.text-accent {
+  color: #22c55e;
+}
+
+/* Desktop menu */
+.jfg-menu {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.jfg-menu-item {
+  position: relative;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 14px;
+  padding: 4px 2px;
+  transition: color 0.2s ease;
+}
+
+.jfg-menu-item:hover,
+.jfg-menu-item.active {
+  color: #ffffff;
+}
+
+.jfg-menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f97316, #22c55e, #38bdf8);
+  transition: width 0.2s ease;
+}
+
+.jfg-menu-item:hover::after,
+.jfg-menu-item.active::after {
+  width: 100%;
+}
+
+/* Hamburger */
+.jfg-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.jfg-hamburger .bar {
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+/* Mobile dropdown */
+.jfg-mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 16px 12px;
+  background: #020617;
+  border-top: 1px solid #1f2937;
+}
+
+.mobile-item {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 0;
+  color: #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .jfg-menu {
+    display: none;
+  }
+
+  .jfg-hamburger {
+    display: flex;
+  }
+
+  .jfg-mobile-menu {
+    display: flex;
+  }
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid #ffffff55;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: #ffffff22;
+  border-color: #ffffff;
+}
+

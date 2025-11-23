@@ -1,0 +1,98 @@
+.jfg-footer {
+  background: #020617;
+  border-top: 1px solid #1f2937;
+  padding: 40px 16px 24px;
+  color: #e5e7eb;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Brand */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #f97316, #22c55e, #38bdf8);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.logo-text {
+  color: #050816;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.brand-title {
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  gap: 4px;
+  font-weight: 700;
+}
+
+.brand-title .java {
+  color: #fbbf24;
+}
+.brand-title .fullstack {
+  color: #22c55e;
+}
+.brand-title .guru {
+  color: #38bdf8;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Links */
+.footer-nav,
+.footer-auth,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Copyright */
+.copy {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+}
