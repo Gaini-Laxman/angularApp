@@ -129,3 +129,10 @@
     font-size: 22px;
   }
 }
+
+.auth-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;   /* 👈 adds space between Login & Sign Up */
+}
+

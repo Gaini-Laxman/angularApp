@@ -1,7 +1,7 @@
 <nav class="jfg-nav">
   <div class="jfg-nav-inner">
     <button class="back-btn" (click)="goBack()">← Back</button>
-    <!-- remove full logo here -->
+
     <div class="jfg-nav-logo"></div>
 
     <!-- Desktop menu -->
@@ -29,5 +29,18 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </button>
+  </div>
+
+  <!-- 👇 MOBILE DROPDOWN MENU -->
+  <div class="jfg-mobile-menu" *ngIf="isMobileMenuOpen">
+    <a
+      *ngFor="let item of navItems"
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      (click)="toggleMenu()"
+      class="mobile-item"
+    >
+      {{ item.label }}
+    </a>
   </div>
 </nav>
