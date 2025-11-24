@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './projects-component.scss',
 })
 export class ProjectsComponent {
-
   openLiveDemo(url: string): void {
     window.open(url, '_blank'); // real-time demo in new tab
   }

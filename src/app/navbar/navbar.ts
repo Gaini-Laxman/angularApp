@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, Location  } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -24,7 +24,7 @@ export class Navbar {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
-   goBack(): void {
+  goBack(): void {
     this.location.back();
   }
 }

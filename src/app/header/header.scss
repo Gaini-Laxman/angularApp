@@ -11,8 +11,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 0;    
-  padding-bottom: 0;  
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* Brand */
@@ -105,7 +105,7 @@
 }
 
 .outline-btn {
-   background: linear-gradient(135deg, #f97316, #22c55e, #38bdf8);
+  background: linear-gradient(135deg, #f97316, #22c55e, #38bdf8);
   color: #050816;
   box-shadow: 0 6px 18px rgba(56, 189, 248, 0.4);
 }
@@ -135,6 +135,6 @@
 .auth-group {
   display: flex;
   align-items: center;
-  gap: 10px;   /* 👈 adds space between Login & Sign Up */
+  gap: 10px;
+  /* 👈 adds space between Login & Sign Up */
 }
-

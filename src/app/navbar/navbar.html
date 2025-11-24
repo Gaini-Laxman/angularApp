@@ -7,24 +7,15 @@
     <!-- Desktop menu -->
     <ul class="jfg-menu">
       <li *ngFor="let item of navItems">
-        <a
-          [routerLink]="item.route"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: item.route === '/' }"
-          class="jfg-menu-item"
-        >
+        <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+          class="jfg-menu-item">
           {{ item.label }}
         </a>
       </li>
     </ul>
 
     <!-- Hamburger (mobile) -->
-    <button
-      type="button"
-      class="jfg-hamburger"
-      (click)="toggleMenu()"
-      aria-label="Toggle navigation"
-    >
+    <button type="button" class="jfg-hamburger" (click)="toggleMenu()" aria-label="Toggle navigation">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -33,13 +24,8 @@
 
   <!-- 👇 MOBILE DROPDOWN MENU -->
   <div class="jfg-mobile-menu" *ngIf="isMobileMenuOpen">
-    <a
-      *ngFor="let item of navItems"
-      [routerLink]="item.route"
-      routerLinkActive="active"
-      (click)="toggleMenu()"
-      class="mobile-item"
-    >
+    <a *ngFor="let item of navItems" [routerLink]="item.route" routerLinkActive="active" (click)="toggleMenu()"
+      class="mobile-item">
       {{ item.label }}
     </a>
   </div>

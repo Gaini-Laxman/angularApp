@@ -10,7 +10,7 @@
       <p class="description">
         Deep dive into OOP, Collections, Streams, Threads, and modern best practices.
       </p>
-      <button class="action-btn">Start Course</button>
+      <button class="action-btn" (click)="openCourse('java')">Start Course</button>
     </article>
 
     <article class="course-card">
@@ -18,7 +18,7 @@
       <p class="description">
         Build REST APIs, handle security (JWT), validations, exception handling, Docker deployment.
       </p>
-      <button class="action-btn">Start Course</button>
+      <button class="action-btn" (click)="openCourse('spring')">Start Course</button>
     </article>
 
     <article class="course-card">
@@ -26,7 +26,30 @@
       <p class="description">
         Standalone components, routing, services, reactive forms, lazy loading — production workflow.
       </p>
-      <button class="action-btn">Start Course</button>
+      <button class="action-btn" (click)="openCourse('angular')">Start Course</button>
     </article>
   </div>
+  <!-- POPUP / MODAL -->
+  <div class="modal-backdrop" *ngIf="activeCourse" (click)="closeCourse()">
+    <div class="modal-card" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="closeCourse()">✕</button>
+
+      <h3 class="modal-title">
+        {{ activeCourse === 'java' ? 'Java Fundamentals → Advanced' :
+        activeCourse === 'spring' ? 'Spring Boot & Microservices' :
+        'Angular for Fullstack Developers' }}
+      </h3>
+
+      <pre class="modal-content">
+{{ activeCourse === 'java' ? 
+  '📌 Java Course Modules\n\nOOP, Collections, Streams, Threads, Functional Programming, Production Best Practices' :
+activeCourse === 'spring' ? 
+  '📌 Spring Boot Course Modules\n\nREST APIs, Security (JWT), Validation, Exception Handling, Microservices, Docker Deployment' :
+  '📌 Angular Course Modules\n\nStandalone Components, Services, Routing, Reactive Forms, Lazy Loading, Enterprise Architecture' }}
+    </pre>
+
+      <button class="begin-btn">Begin Now 🚀</button>
+    </div>
+  </div>
+
 </section>

@@ -5,31 +5,42 @@
   </p>
 
   <div class="blog-grid">
-    <!-- Article 1 -->
-    <article class="blog-card">
-      <h3 class="blog-title">Java 17 — Features Every Backend Developer Must Know</h3>
+    <article class="blog-card" *ngFor="let article of articles">
+      <h3 class="blog-title">{{ article.title }}</h3>
       <p class="excerpt">
-        Pattern matching, sealed classes, records, switch expressions — real examples with enterprise code context.
+        {{ article.excerpt }}
       </p>
-      <button type="button" class="read-btn">Read Article</button>
+      <button
+        type="button"
+        class="read-btn"
+        (click)="openArticle(article)"
+      >
+        Read Article
+      </button>
     </article>
+  </div>
 
-    <!-- Article 2 -->
-    <article class="blog-card">
-      <h3 class="blog-title">Spring Boot Exception Handling — The Correct Way</h3>
-      <p class="excerpt">
-        @ControllerAdvice, custom error responses, validation handling, and global API error strategy for production.
-      </p>
-      <button type="button" class="read-btn">Read Article</button>
-    </article>
+  <!-- POPUP / MODAL -->
+  <div
+    class="modal-backdrop"
+    *ngIf="activeArticle"
+    (click)="closeArticle()"
+  >
+    <div class="modal-card" (click)="$event.stopPropagation()">
+      <button
+        class="modal-close"
+        type="button"
+        (click)="closeArticle()"
+        aria-label="Close article"
+      >
+        ✕
+      </button>
 
-    <!-- Article 3 -->
-    <article class="blog-card">
-      <h3 class="blog-title">Angular Standalone Components — Real World Architecture</h3>
-      <p class="excerpt">
-        Project structure, service/data layers, folder strategy, and how to avoid spaghetti modules.
-      </p>
-      <button type="button" class="read-btn">Read Article</button>
-    </article>
+      <h3 class="modal-title">{{ activeArticle?.title }}</h3>
+
+      <pre class="modal-content">
+{{ activeArticle?.content }}
+      </pre>
+    </div>
   </div>
 </section>

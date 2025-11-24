@@ -1,145 +1,145 @@
 .projects-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 32px 20px;
-  color: #e5e7eb;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 20px;
+    color: #e5e7eb;
 }
 
 .title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #38bdf8; // blue accent
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #38bdf8; // blue accent
 }
 
 .subtitle {
-  font-size: 14px;
-  color: #9ca3af;
-  margin-bottom: 26px;
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 26px;
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .project-card {
-  background: radial-gradient(circle at top left, #111827, #020617);
-  border-radius: 16px;
-  padding: 18px 18px 16px;
-  border: 1px solid #1f2937;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.75);
-  transition:
-    transform 0.18s ease,
-    border-color 0.18s ease,
-    box-shadow 0.18s ease;
+    background: radial-gradient(circle at top left, #111827, #020617);
+    border-radius: 16px;
+    padding: 18px 18px 16px;
+    border: 1px solid #1f2937;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.75);
+    transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
 }
 
 .project-card:hover {
-  border-color: #22c55e;
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.9);
+    border-color: #22c55e;
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.9);
 }
 
 .project-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 6px;
 }
 
 .project-header h3 {
-  font-size: 18px;
-  margin: 0;
-  color: #fefce8;
+    font-size: 18px;
+    margin: 0;
+    color: #fefce8;
 }
 
 .tag {
-  font-size: 11px;
-  padding: 3px 8px;
-  border-radius: 999px;
-  border: 1px solid transparent;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid transparent;
 }
 
 .tag.fullstack {
-  border-color: #22c55e;
-  color: #bbf7d0;
+    border-color: #22c55e;
+    color: #bbf7d0;
 }
 
 .tag.backend {
-  border-color: #f97316;
-  color: #fed7aa;
+    border-color: #f97316;
+    color: #fed7aa;
 }
 
 .tag.frontend {
-  border-color: #38bdf8;
-  color: #bae6fd;
+    border-color: #38bdf8;
+    color: #bae6fd;
 }
 
 .description {
-  font-size: 13px;
-  color: #cbd5e1;
-  margin: 6px 0 10px;
+    font-size: 13px;
+    color: #cbd5e1;
+    margin: 6px 0 10px;
 }
 
 .stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
 }
 
 .stack span {
-  font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid #1f2937;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid #1f2937;
 }
 
 .actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
 }
 
 .btn {
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: 0.18s ease;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.18s ease;
 }
 
 .btn.primary {
-  background: linear-gradient(135deg, #f97316, #22c55e, #38bdf8);
-  color: #050816;
+    background: linear-gradient(135deg, #f97316, #22c55e, #38bdf8);
+    color: #050816;
 }
 
 .btn.primary:hover {
-  filter: brightness(1.07);
+    filter: brightness(1.07);
 }
 
 .btn.secondary {
-  background: transparent;
-  color: #e5e7eb;
-  border-color: #4b5563;
+    background: transparent;
+    color: #e5e7eb;
+    border-color: #4b5563;
 }
 
 .btn.secondary:hover {
-  border-color: #e5e7eb;
+    border-color: #e5e7eb;
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 24px;
-  }
+    .title {
+        font-size: 24px;
+    }
 
-  .projects-section {
-    padding: 24px 16px;
-  }
+    .projects-section {
+        padding: 24px 16px;
+    }
 }

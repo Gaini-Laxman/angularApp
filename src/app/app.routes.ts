@@ -13,7 +13,7 @@ export const routes: Routes = [
   { path: 'courses', component: CoursesComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'blog', component: BlogComponent },
-  {path: 'login', component: LoginComponent},
-  {path: 'signup', component: SignupComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
   { path: '**', redirectTo: '' },
 ];
